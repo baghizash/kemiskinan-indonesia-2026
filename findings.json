@@ -1,0 +1,162 @@
+{
+  "terbaru": {
+    "periode": "Mar 2026",
+    "persen": 8.07,
+    "jumlah_juta": 22.93,
+    "garis_kemiskinan_rp": 669235
+  },
+  "mar2019": {
+    "persen": 9.41,
+    "jumlah_juta": 25.14,
+    "garis_kemiskinan_rp": 425250
+  },
+  "delta_2019_2026_pp": -1.34,
+  "delta_2019_2026_juta": -2.21,
+  "puncak_pandemi": {
+    "periode": "Sep 2020",
+    "persen": 10.19,
+    "jumlah_juta": 27.55
+  },
+  "lonjakan_pandemi_pp": 0.78,
+  "kembali_di_bawah_prapandemi": {
+    "periode": "Mar 2023",
+    "persen": 9.36
+  },
+  "gk_tumbuh_persen_2019_2026": 57.4,
+  "gk_cagr_persen": 6.69,
+  "pangsa_makanan_mar2026_persen": 74.7,
+  "pangsa_makanan_mar2019_persen": 73.66,
+  "gap_kota_desa_pp": {
+    "Mar 2019": 6.16,
+    "Sep 2020": 5.32,
+    "Mar 2026": 4.33
+  },
+  "rasio_desa_kota_mar2026": 1.68,
+  "kota_mar2026": {
+    "persen": 6.34,
+    "jumlah_juta": 10.83
+  },
+  "desa_mar2026": {
+    "persen": 10.67,
+    "jumlah_juta": 12.1
+  },
+  "gini": {
+    "mar2019": 0.382,
+    "puncak": {
+      "periode": "Mar 2023",
+      "nilai": 0.388
+    },
+    "terendah": {
+      "periode": "Sep 2025",
+      "nilai": 0.363
+    },
+    "mar2026": 0.368,
+    "kota_mar2026": 0.387,
+    "desa_mar2026": 0.296,
+    "perubahan_sep2025_mar2026": 0.005
+  },
+  "pangsa_40_terbawah_mar2026_persen": 19.22,
+  "p1p2": {
+    "p1_sep2020": 1.75,
+    "p2_sep2020": 0.47,
+    "p1_mar2026": 1.268,
+    "p2_mar2026": 0.291,
+    "p1_kota_mar2026": 0.951,
+    "p1_desa_mar2026": 1.744,
+    "p2_kota_mar2026": 0.209,
+    "p2_desa_mar2026": 0.414,
+    "p1_desa_sep2025": 1.661,
+    "p1_kota_sep2025": 1.04,
+    "p1_turun_persen_dari_puncak": -27.5
+  },
+  "provinsi_mar2026": {
+    "tertinggi": {
+      "provinsi": "Papua Tengah",
+      "persen": 30.41
+    },
+    "terendah": {
+      "provinsi": "Bali",
+      "persen": 3.44
+    },
+    "gap_pp": 26.97,
+    "rasio": 8.84
+  },
+  "provinsi_di_atas_nasional_mar2026": 20,
+  "pangsa_jawa_mar2026_persen": 52.43,
+  "jumlah_per_pulau_mar2026_juta": {
+    "Jawa": 12.02,
+    "Sumatera": 5.0,
+    "Bali dan Nusa Tenggara": 1.83,
+    "Sulawesi": 1.77,
+    "Maluku dan Papua": 1.44,
+    "Kalimantan": 0.87
+  },
+  "perubahan_2019_2026_32provinsi": {
+    "membaik_terbesar": [
+      {
+        "provinsi": "Nusa Tenggara Timur",
+        "delta_pp": -3.57
+      },
+      {
+        "provinsi": "Bengkulu",
+        "delta_pp": -3.4
+      },
+      {
+        "provinsi": "Nusa Tenggara Barat",
+        "delta_pp": -3.39
+      },
+      {
+        "provinsi": "Gorontalo",
+        "delta_pp": -3.36
+      },
+      {
+        "provinsi": "Lampung",
+        "delta_pp": -3.31
+      }
+    ],
+    "memburuk": [
+      {
+        "provinsi": "DKI Jakarta",
+        "delta_pp": 0.49
+      },
+      {
+        "provinsi": "Banten",
+        "delta_pp": 0.29
+      },
+      {
+        "provinsi": "Kepulauan Bangka Belitung",
+        "delta_pp": 0.13
+      },
+      {
+        "provinsi": "Kalimantan Tengah",
+        "delta_pp": 0.11
+      }
+    ],
+    "jumlah_membaik": 28,
+    "jumlah_total": 32
+  },
+  "gk_provinsi_mar2026": {
+    "tertinggi": {
+      "provinsi": "Papua Pegunungan",
+      "rp": 1275343
+    },
+    "terendah": {
+      "provinsi": "Sulawesi Barat",
+      "rp": 519404
+    }
+  },
+  "jumlah_terbesar_mar2026": [
+    {
+      "provinsi": "Jawa Timur",
+      "ribu": 3712.23
+    },
+    {
+      "provinsi": "Jawa Barat",
+      "ribu": 3436.48
+    },
+    {
+      "provinsi": "Jawa Tengah",
+      "ribu": 3285.43
+    }
+  ]
+}
