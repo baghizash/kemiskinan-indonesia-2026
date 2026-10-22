@@ -1,0 +1,66 @@
+table fact_gini
+	lineageTag: cab2031c-0eec-5db5-a23b-83f15b0434e2
+
+	measure 'Gini Ratio' =
+			AVERAGE ( fact_gini[gini_ratio] )
+		formatString: 0.000
+		lineageTag: fa4fcae9-7216-57f0-b3c7-ed2302a28590
+
+	measure 'Gini Mar 2026' =
+			CALCULATE ( [Gini Ratio], fact_gini[daerah] = "Total", dim_periode[periode] = "Mar 2026" )
+		formatString: 0.000
+		lineageTag: d96f40d2-03ef-5ac4-a226-c98fe1a0cc8e
+
+	measure 'Gini Kota Mar 2026' =
+			CALCULATE ( AVERAGE ( fact_gini[gini_ratio] ), fact_gini[daerah] = "Perkotaan", dim_periode[periode] = "Mar 2026" )
+		formatString: 0.000
+		lineageTag: c3c17253-3d16-59dd-ba21-17f9928eacce
+
+	measure 'Gini Desa Mar 2026' =
+			CALCULATE ( AVERAGE ( fact_gini[gini_ratio] ), fact_gini[daerah] = "Perdesaan", dim_periode[periode] = "Mar 2026" )
+		formatString: 0.000
+		lineageTag: 8e593a63-dbbb-51b7-8e06-67cf56d30f39
+
+	column periode_id
+		dataType: int64
+		formatString: 0
+		lineageTag: a654f25a-1c24-5e1e-9817-f49168831621
+		summarizeBy: none
+		sourceColumn: periode_id
+
+	column periode
+		dataType: string
+		lineageTag: 28ad5d25-ac35-580e-aa6b-d87f3c10be12
+		summarizeBy: none
+		sourceColumn: periode
+
+	column daerah
+		dataType: string
+		lineageTag: 0b72ed9c-4ef3-52e9-a433-bc0faac54535
+		summarizeBy: none
+		sourceColumn: daerah
+
+	column gini_ratio
+		dataType: double
+		formatString: 0.000
+		lineageTag: 0affe00a-93aa-5594-bbf3-f83882185db4
+		summarizeBy: none
+		sourceColumn: gini_ratio
+
+	column pangsa_40_terbawah_persen
+		dataType: double
+		formatString: 0.00
+		lineageTag: b30a53e8-6291-5c6e-8bb2-05641dc1e4a4
+		summarizeBy: none
+		sourceColumn: pangsa_40_terbawah_persen
+
+	partition fact_gini = m
+		mode: import
+		source = ```
+				let
+					Source = Csv.Document(File.Contents(FolderData & "\fact_gini.csv"), [Delimiter = ",", Columns = 5, Encoding = 65001, QuoteStyle = QuoteStyle.None]),
+					PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					ChangedType = Table.TransformColumnTypes(PromotedHeaders, {{"periode_id", Int64.Type}, {"periode", type text}, {"daerah", type text}, {"gini_ratio", type number}, {"pangsa_40_terbawah_persen", type number}})
+				in
+					ChangedType
+				```
