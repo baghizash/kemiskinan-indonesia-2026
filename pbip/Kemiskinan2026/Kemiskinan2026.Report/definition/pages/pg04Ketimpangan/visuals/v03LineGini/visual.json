@@ -1,0 +1,102 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "v03LineGini",
+  "position": {
+    "x": 0,
+    "y": 76,
+    "z": 2,
+    "height": 280,
+    "width": 620,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_periode"
+                    }
+                  },
+                  "Property": "periode"
+                }
+              },
+              "queryRef": "dim_periode.periode",
+              "nativeQueryRef": "periode"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_gini"
+                    }
+                  },
+                  "Property": "Gini Ratio"
+                }
+              },
+              "queryRef": "fact_gini.Gini Ratio",
+              "nativeQueryRef": "Gini Ratio"
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_gini"
+                    }
+                  },
+                  "Property": "daerah"
+                }
+              },
+              "queryRef": "fact_gini.daerah",
+              "nativeQueryRef": "daerah"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Gini Ratio Total / Kota / Desa per Periode'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
