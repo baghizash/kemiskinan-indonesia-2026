@@ -1,0 +1,99 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "dim_periode",
+          "nodeLineageTag": "5863bfa9-e2d7-5199-9aac-6d7a4191973b",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 300,
+            "y": 0
+          },
+          "nodeIndex": "dim_provinsi",
+          "nodeLineageTag": "332e4596-78bf-5ff0-b8cf-0c7a03599395",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 600,
+            "y": 0
+          },
+          "nodeIndex": "fact_kemiskinan_nasional",
+          "nodeLineageTag": "db481cfe-af59-5d9c-a814-0177fe4c1296",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 260
+          },
+          "nodeIndex": "fact_kemiskinan_kota_desa",
+          "nodeLineageTag": "1ed17a2e-7e65-51e9-8690-cb3595c1d8ae",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 300,
+            "y": 260
+          },
+          "nodeIndex": "fact_gini",
+          "nodeLineageTag": "cab2031c-0eec-5db5-a23b-83f15b0434e2",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 600,
+            "y": 260
+          },
+          "nodeIndex": "fact_kemiskinan_provinsi",
+          "nodeLineageTag": "f100ca0b-e7e9-5c47-8bda-7bd970d846d7",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 5
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFields": [],
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}
