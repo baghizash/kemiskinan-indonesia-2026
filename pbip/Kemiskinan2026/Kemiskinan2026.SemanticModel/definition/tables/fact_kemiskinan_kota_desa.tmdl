@@ -1,0 +1,65 @@
+table fact_kemiskinan_kota_desa
+	lineageTag: 1ed17a2e-7e65-51e9-8690-cb3595c1d8ae
+
+	measure 'Persen Miskin Kota Desa' =
+			AVERAGE ( fact_kemiskinan_kota_desa[persen_miskin] )
+		formatString: 0.00
+		lineageTag: c1d45df0-cef9-56c3-a6ca-ed9cb927a0e3
+
+	column periode_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 6e9b4828-cb68-5ec0-b92d-bc0e92be4793
+		summarizeBy: none
+		sourceColumn: periode_id
+
+	column periode
+		dataType: string
+		lineageTag: ed346377-d805-5f8d-af77-9e5980ae6069
+		summarizeBy: none
+		sourceColumn: periode
+
+	column daerah
+		dataType: string
+		lineageTag: 16b05ecf-3f9d-5af3-bef4-5c9e7118d153
+		summarizeBy: none
+		sourceColumn: daerah
+
+	column persen_miskin
+		dataType: double
+		formatString: 0.00
+		lineageTag: 8b2224c9-b770-501c-a008-77cfd8b08d29
+		summarizeBy: none
+		sourceColumn: persen_miskin
+
+	column jumlah_miskin_juta
+		dataType: double
+		formatString: 0.00
+		lineageTag: 2afab9e3-02da-5227-9947-e4076ea2f6d0
+		summarizeBy: none
+		sourceColumn: jumlah_miskin_juta
+
+	column p1
+		dataType: double
+		formatString: 0.000
+		lineageTag: c5e2483f-c0e9-50b4-aa7f-94495b19092a
+		summarizeBy: none
+		sourceColumn: p1
+
+	column p2
+		dataType: double
+		formatString: 0.000
+		lineageTag: 2965938f-a35d-54e6-ae79-b0b6d617bb8f
+		summarizeBy: none
+		sourceColumn: p2
+
+	partition fact_kemiskinan_kota_desa = m
+		mode: import
+		source = ```
+				let
+					Source = Csv.Document(File.Contents(FolderData & "\fact_kemiskinan_kota_desa.csv"), [Delimiter = ",", Columns = 7, Encoding = 65001, QuoteStyle = QuoteStyle.None]),
+					PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					ChangedType = Table.TransformColumnTypes(PromotedHeaders, {{"periode_id", Int64.Type}, {"periode", type text}, {"daerah", type text}, {"persen_miskin", type number}, {"jumlah_miskin_juta", type number}, {"p1", type number}, {"p2", type number}})
+				in
+					ChangedType
+				```
