@@ -1,0 +1,47 @@
+table dim_periode
+	lineageTag: 5863bfa9-e2d7-5199-9aac-6d7a4191973b
+
+	column periode_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 90dbc1c2-2022-5b27-ba31-8e917793155d
+		summarizeBy: none
+		sourceColumn: periode_id
+
+	column periode
+		dataType: string
+		lineageTag: b780824a-ecd3-54ce-aa7e-cb9b6f167621
+		sortByColumn: urutan
+		summarizeBy: none
+		sourceColumn: periode
+
+	column tahun
+		dataType: int64
+		formatString: 0
+		lineageTag: 3f525e62-da0f-5af7-9c1d-d41107785fa2
+		summarizeBy: none
+		sourceColumn: tahun
+
+	column bulan
+		dataType: string
+		lineageTag: afa0b73b-ec95-5fad-bdb1-1e3615bf4cfd
+		summarizeBy: none
+		sourceColumn: bulan
+
+	column urutan
+		dataType: int64
+		formatString: 0
+		lineageTag: 35f40eb1-bda9-5b33-b633-d976ea053449
+		summarizeBy: none
+		sourceColumn: urutan
+
+	partition dim_periode = m
+		mode: import
+		source = ```
+				let
+					Source = Csv.Document(File.Contents(FolderData & "\dim_periode.csv"), [Delimiter = ",", Columns = 5, Encoding = 65001, QuoteStyle = QuoteStyle.None]),
+					PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					ChangedType = Table.TransformColumnTypes(PromotedHeaders, {{"periode_id", Int64.Type}, {"periode", type text}, {"tahun", Int64.Type}, {"bulan", type text}, {"urutan", Int64.Type}})
+				in
+					ChangedType
+				```
