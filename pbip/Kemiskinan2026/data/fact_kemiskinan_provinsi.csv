@@ -1,0 +1,187 @@
+periode_id,periode,provinsi,persen_miskin,jumlah_miskin_ribu,garis_kemiskinan_rp
+201903,Mar 2019,Aceh,15.32,819.44,
+201903,Mar 2019,Sumatera Utara,8.83,1282.04,
+201903,Mar 2019,Sumatera Barat,6.42,348.22,
+201903,Mar 2019,Riau,7.08,490.72,
+201903,Mar 2019,Jambi,7.6,274.32,
+201903,Mar 2019,Sumatera Selatan,12.71,1073.74,
+201903,Mar 2019,Bengkulu,15.23,302.3,
+201903,Mar 2019,Lampung,12.62,1063.66,
+201903,Mar 2019,Kepulauan Bangka Belitung,4.62,68.38,
+201903,Mar 2019,Kepulauan Riau,5.9,128.46,
+201903,Mar 2019,DKI Jakarta,3.47,365.55,
+201903,Mar 2019,Jawa Barat,6.91,3399.16,
+201903,Mar 2019,Jawa Tengah,10.8,3743.23,
+201903,Mar 2019,DI Yogyakarta,11.7,448.47,
+201903,Mar 2019,Jawa Timur,10.37,4112.25,
+201903,Mar 2019,Banten,5.09,654.46,
+201903,Mar 2019,Bali,3.79,163.85,
+201903,Mar 2019,Nusa Tenggara Barat,14.56,735.96,
+201903,Mar 2019,Nusa Tenggara Timur,21.09,,
+201903,Mar 2019,Kalimantan Barat,7.49,,
+201903,Mar 2019,Kalimantan Tengah,4.98,,
+201903,Mar 2019,Kalimantan Selatan,4.55,,
+201903,Mar 2019,Kalimantan Timur,5.94,,
+201903,Mar 2019,Kalimantan Utara,6.63,,
+201903,Mar 2019,Sulawesi Utara,7.66,,
+201903,Mar 2019,Sulawesi Tengah,13.48,,
+201903,Mar 2019,Sulawesi Selatan,8.69,,
+201903,Mar 2019,Sulawesi Tenggara,11.24,,
+201903,Mar 2019,Gorontalo,15.52,,
+201903,Mar 2019,Sulawesi Barat,11.02,,
+201903,Mar 2019,Maluku,17.69,,
+201903,Mar 2019,Maluku Utara,6.77,,
+201903,Mar 2019,Papua Barat,22.17,,
+201903,Mar 2019,Papua,27.53,,
+202409,Sep 2024,Aceh,12.64,718.96,
+202409,Sep 2024,Sumatera Utara,7.19,1110.92,
+202409,Sep 2024,Sumatera Barat,5.42,315.43,
+202409,Sep 2024,Riau,6.36,473.04,
+202409,Sep 2024,Jambi,7.26,272.7,
+202409,Sep 2024,Sumatera Selatan,10.51,948.84,
+202409,Sep 2024,Bengkulu,12.52,261.15,
+202409,Sep 2024,Lampung,10.62,939.3,
+202409,Sep 2024,Kepulauan Bangka Belitung,5.08,78.58,
+202409,Sep 2024,Kepulauan Riau,4.78,124.96,
+202409,Sep 2024,DKI Jakarta,4.14,449.07,
+202409,Sep 2024,Jawa Barat,7.08,3668.35,
+202409,Sep 2024,Jawa Tengah,9.58,3396.34,
+202409,Sep 2024,DI Yogyakarta,10.4,430.47,
+202409,Sep 2024,Jawa Timur,9.56,3893.82,
+202409,Sep 2024,Banten,5.7,777.49,
+202409,Sep 2024,Bali,3.8,176.21,
+202409,Sep 2024,Nusa Tenggara Barat,11.91,658.6,
+202409,Sep 2024,Nusa Tenggara Timur,19.02,1107.94,
+202409,Sep 2024,Kalimantan Barat,6.25,333.99,
+202409,Sep 2024,Kalimantan Tengah,5.26,149.24,
+202409,Sep 2024,Kalimantan Selatan,4.02,180.2,
+202409,Sep 2024,Kalimantan Timur,5.51,211.88,
+202409,Sep 2024,Kalimantan Utara,5.38,41.11,
+202409,Sep 2024,Sulawesi Utara,6.7,173.3,
+202409,Sep 2024,Sulawesi Tengah,11.04,358.33,
+202409,Sep 2024,Sulawesi Selatan,7.77,711.77,
+202409,Sep 2024,Sulawesi Tenggara,10.63,305.27,
+202409,Sep 2024,Gorontalo,13.87,170.03,
+202409,Sep 2024,Sulawesi Barat,10.71,155.91,
+202409,Sep 2024,Maluku,15.78,293.99,
+202409,Sep 2024,Maluku Utara,6.03,79.69,
+202409,Sep 2024,Papua Barat,21.09,108.28,
+202409,Sep 2024,Papua Barat Daya,16.95,96.81,
+202409,Sep 2024,Papua,18.09,161.07,
+202409,Sep 2024,Papua Selatan,19.35,103.02,
+202409,Sep 2024,Papua Tengah,27.6,287.54,
+202409,Sep 2024,Papua Pegunungan,29.66,331.12,
+202503,Mar 2025,Aceh,12.33,704.69,
+202503,Mar 2025,Sumatera Utara,7.36,1140.25,
+202503,Mar 2025,Sumatera Barat,5.35,312.35,
+202503,Mar 2025,Riau,6.16,460.96,
+202503,Mar 2025,Jambi,7.19,270.94,
+202503,Mar 2025,Sumatera Selatan,10.15,919.6,
+202503,Mar 2025,Bengkulu,12.08,252.97,
+202503,Mar 2025,Lampung,10.0,887.02,
+202503,Mar 2025,Kepulauan Bangka Belitung,5.0,77.71,
+202503,Mar 2025,Kepulauan Riau,4.44,117.28,
+202503,Mar 2025,DKI Jakarta,4.28,464.87,
+202503,Mar 2025,Jawa Barat,7.02,3654.74,
+202503,Mar 2025,Jawa Tengah,9.48,3366.69,
+202503,Mar 2025,DI Yogyakarta,10.23,425.82,
+202503,Mar 2025,Jawa Timur,9.5,3875.88,
+202503,Mar 2025,Banten,5.63,772.78,
+202503,Mar 2025,Bali,3.72,173.24,
+202503,Mar 2025,Nusa Tenggara Barat,11.78,654.57,
+202503,Mar 2025,Nusa Tenggara Timur,18.6,1088.78,
+202503,Mar 2025,Kalimantan Barat,6.16,330.95,
+202503,Mar 2025,Kalimantan Tengah,5.19,147.8,
+202503,Mar 2025,Kalimantan Selatan,3.84,172.72,
+202503,Mar 2025,Kalimantan Timur,5.17,199.71,
+202503,Mar 2025,Kalimantan Utara,5.54,42.57,
+202503,Mar 2025,Sulawesi Utara,6.71,173.84,
+202503,Mar 2025,Sulawesi Tengah,10.92,356.19,
+202503,Mar 2025,Sulawesi Selatan,7.6,698.13,
+202503,Mar 2025,Sulawesi Tenggara,10.54,304.43,
+202503,Mar 2025,Gorontalo,13.24,162.74,
+202503,Mar 2025,Sulawesi Barat,10.41,152.31,
+202503,Mar 2025,Maluku,15.38,287.76,
+202503,Mar 2025,Maluku Utara,5.81,77.27,
+202503,Mar 2025,Papua Barat,20.66,106.9,
+202503,Mar 2025,Papua Barat Daya,17.95,103.57,
+202503,Mar 2025,Papua,19.16,171.38,
+202503,Mar 2025,Papua Selatan,19.71,105.53,
+202503,Mar 2025,Papua Tengah,28.9,302.31,
+202503,Mar 2025,Papua Pegunungan,30.03,337.32,
+202509,Sep 2025,Aceh,12.22,703.33,
+202509,Sep 2025,Sumatera Utara,7.24,1128.06,
+202509,Sep 2025,Sumatera Barat,5.31,312.3,
+202509,Sep 2025,Riau,6.3,475.57,
+202509,Sep 2025,Jambi,6.89,261.25,
+202509,Sep 2025,Sumatera Selatan,9.85,898.24,
+202509,Sep 2025,Bengkulu,11.88,250.19,
+202509,Sep 2025,Lampung,9.66,860.13,
+202509,Sep 2025,Kepulauan Bangka Belitung,4.77,74.65,
+202509,Sep 2025,Kepulauan Riau,4.26,114.55,
+202509,Sep 2025,DKI Jakarta,4.03,439.12,
+202509,Sep 2025,Jawa Barat,6.78,3550.71,
+202509,Sep 2025,Jawa Tengah,9.39,3344.82,
+202509,Sep 2025,DI Yogyakarta,10.08,422.79,
+202509,Sep 2025,Jawa Timur,9.3,3804.29,
+202509,Sep 2025,Banten,5.51,760.85,
+202509,Sep 2025,Bali,3.42,160.09,
+202509,Sep 2025,Nusa Tenggara Barat,11.38,637.18,
+202509,Sep 2025,Nusa Tenggara Timur,17.5,1031.69,
+202509,Sep 2025,Kalimantan Barat,5.97,322.54,
+202509,Sep 2025,Kalimantan Tengah,4.94,141.75,
+202509,Sep 2025,Kalimantan Selatan,3.73,168.81,
+202509,Sep 2025,Kalimantan Timur,5.19,202.04,
+202509,Sep 2025,Kalimantan Utara,5.47,42.45,
+202509,Sep 2025,Sulawesi Utara,6.62,172.13,
+202509,Sep 2025,Sulawesi Tengah,10.52,345.38,
+202509,Sep 2025,Sulawesi Selatan,7.43,685.14,
+202509,Sep 2025,Sulawesi Tenggara,10.14,295.31,
+202509,Sep 2025,Gorontalo,12.62,155.76,
+202509,Sep 2025,Sulawesi Barat,10.18,149.88,
+202509,Sep 2025,Maluku,15.25,286.86,
+202509,Sep 2025,Maluku Utara,5.59,74.81,
+202509,Sep 2025,Papua Barat,19.58,102.4,
+202509,Sep 2025,Papua Barat Daya,17.5,102.41,
+202509,Sep 2025,Papua,17.82,160.25,
+202509,Sep 2025,Papua Selatan,19.26,103.92,
+202509,Sep 2025,Papua Tengah,29.45,309.86,
+202509,Sep 2025,Papua Pegunungan,27.21,308.19,
+202603,Mar 2026,Aceh,12.34,713.78,742464.0
+202603,Mar 2026,Sumatera Utara,7.1,1110.37,743301.0
+202603,Mar 2026,Sumatera Barat,5.27,311.14,808511.0
+202603,Mar 2026,Riau,6.19,470.8,758447.0
+202603,Mar 2026,Jambi,6.67,253.73,744065.0
+202603,Mar 2026,Sumatera Selatan,9.5,869.97,628228.0
+202603,Mar 2026,Bengkulu,11.83,250.11,735745.0
+202603,Mar 2026,Lampung,9.31,831.89,657467.0
+202603,Mar 2026,Kepulauan Bangka Belitung,4.75,74.61,1012331.0
+202603,Mar 2026,Kepulauan Riau,4.09,111.22,891524.0
+202603,Mar 2026,DKI Jakarta,3.96,432.62,925525.0
+202603,Mar 2026,Jawa Barat,6.54,3436.48,609790.0
+202603,Mar 2026,Jawa Tengah,9.21,3285.43,596676.0
+202603,Mar 2026,DI Yogyakarta,9.7,408.87,672756.0
+202603,Mar 2026,Jawa Timur,9.06,3712.23,609732.0
+202603,Mar 2026,Banten,5.38,746.73,753492.0
+202603,Mar 2026,Bali,3.44,162.01,675354.0
+202603,Mar 2026,Nusa Tenggara Barat,11.17,628.5,606951.0
+202603,Mar 2026,Nusa Tenggara Timur,17.52,1037.64,584252.0
+202603,Mar 2026,Kalimantan Barat,5.78,313.37,675653.0
+202603,Mar 2026,Kalimantan Tengah,5.09,146.71,723149.0
+202603,Mar 2026,Kalimantan Selatan,3.63,165.41,714032.0
+202603,Mar 2026,Kalimantan Timur,5.14,200.64,935662.0
+202603,Mar 2026,Kalimantan Utara,5.18,40.54,948355.0
+202603,Mar 2026,Sulawesi Utara,6.32,164.78,578499.0
+202603,Mar 2026,Sulawesi Tengah,10.46,345.06,685244.0
+202603,Mar 2026,Sulawesi Selatan,7.24,669.63,542095.0
+202603,Mar 2026,Sulawesi Tenggara,10.02,293.47,536562.0
+202603,Mar 2026,Gorontalo,12.16,150.6,535255.0
+202603,Mar 2026,Sulawesi Barat,10.0,148.06,519404.0
+202603,Mar 2026,Maluku,14.91,281.54,825638.0
+202603,Mar 2026,Maluku Utara,5.79,77.85,724488.0
+202603,Mar 2026,Papua Barat,18.68,98.46,909502.0
+202603,Mar 2026,Papua Barat Daya,16.49,97.51,871495.0
+202603,Mar 2026,Papua,18.39,165.98,773455.0
+202603,Mar 2026,Papua Selatan,18.54,100.61,615015.0
+202603,Mar 2026,Papua Tengah,30.41,321.28,905417.0
+202603,Mar 2026,Papua Pegunungan,26.34,300.06,1275343.0
