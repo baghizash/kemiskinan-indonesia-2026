@@ -1,0 +1,14 @@
+model Model
+	culture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+ref table dim_periode
+ref table dim_provinsi
+ref table fact_kemiskinan_nasional
+ref table fact_kemiskinan_kota_desa
+ref table fact_gini
+ref table fact_kemiskinan_provinsi
+
+ref expression FolderData
