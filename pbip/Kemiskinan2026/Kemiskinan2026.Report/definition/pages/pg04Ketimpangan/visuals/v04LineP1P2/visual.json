@@ -1,0 +1,100 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "v04LineP1P2",
+  "position": {
+    "x": 640,
+    "y": 76,
+    "z": 3,
+    "height": 280,
+    "width": 620,
+    "tabOrder": 3
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_periode"
+                    }
+                  },
+                  "Property": "periode"
+                }
+              },
+              "queryRef": "dim_periode.periode",
+              "nativeQueryRef": "periode"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_kemiskinan_nasional"
+                    }
+                  },
+                  "Function": 1,
+                  "Property": "p1"
+                }
+              },
+              "queryRef": "fact_kemiskinan_nasional.p1",
+              "nativeQueryRef": "Average of p1"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_kemiskinan_nasional"
+                    }
+                  },
+                  "Function": 1,
+                  "Property": "p2"
+                }
+              },
+              "queryRef": "fact_kemiskinan_nasional.p2",
+              "nativeQueryRef": "Average of p2"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Indeks Kedalaman (P1) & Keparahan (P2) — mulai Mar 2020'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
