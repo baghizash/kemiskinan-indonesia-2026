@@ -1,0 +1,120 @@
+table fact_kemiskinan_nasional
+	lineageTag: db481cfe-af59-5d9c-a814-0177fe4c1296
+
+	measure 'Rata Rata Persen Miskin' =
+			AVERAGE ( fact_kemiskinan_nasional[persen_miskin] )
+		formatString: 0.00
+		lineageTag: 2abe388f-a518-5893-952f-b1674109460d
+
+	measure 'Persen Miskin Mar 2026' =
+			CALCULATE ( [Rata Rata Persen Miskin], dim_periode[periode] = "Mar 2026" )
+		formatString: 0.00
+		lineageTag: dbb684a2-051c-5da5-ae9e-7d695f9af6fd
+
+	measure 'Persen Miskin Mar 2019' =
+			CALCULATE ( [Rata Rata Persen Miskin], dim_periode[periode] = "Mar 2019" )
+		formatString: 0.00
+		lineageTag: 9960ca2a-932f-55af-b270-a4be25f5eaa4
+
+	measure 'Perubahan Persen Miskin 2019 ke 2026' =
+			[Persen Miskin Mar 2026] - [Persen Miskin Mar 2019]
+		formatString: 0.00
+		lineageTag: 2ae9bffe-382c-5300-848d-eae059ee0af4
+
+	measure 'Jumlah Miskin Mar 2026 Juta' =
+			CALCULATE ( AVERAGE ( fact_kemiskinan_nasional[jumlah_miskin_juta] ), dim_periode[periode] = "Mar 2026" )
+		formatString: 0.00
+		lineageTag: c00152e2-74c8-544d-b39b-548d8e218122
+
+	measure 'Persen Miskin Puncak Pandemi Sep 2020' =
+			CALCULATE ( [Rata Rata Persen Miskin], dim_periode[periode] = "Sep 2020" )
+		formatString: 0.00
+		lineageTag: edf895e4-354d-5891-b986-857c69236ddf
+
+	measure 'Garis Kemiskinan Mar 2026' =
+			CALCULATE ( AVERAGE ( fact_kemiskinan_nasional[garis_kemiskinan_rp] ), dim_periode[periode] = "Mar 2026" )
+		formatString: #,##0
+		lineageTag: 75557666-8962-52d5-a6de-b7c67691aec8
+
+	measure 'P1 Mar 2026' =
+			CALCULATE ( AVERAGE ( fact_kemiskinan_nasional[p1] ), dim_periode[periode] = "Mar 2026" )
+		formatString: 0.000
+		lineageTag: 6a7b7863-45ce-5220-8082-9f5818633850
+
+	measure 'P2 Mar 2026' =
+			CALCULATE ( AVERAGE ( fact_kemiskinan_nasional[p2] ), dim_periode[periode] = "Mar 2026" )
+		formatString: 0.000
+		lineageTag: a57a3568-660b-5629-887f-c8297b558f08
+
+	column periode_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 725ddef4-ebfb-57bf-ad50-70b4a5f12023
+		summarizeBy: none
+		sourceColumn: periode_id
+
+	column periode
+		dataType: string
+		lineageTag: 922168a7-8da2-5cf0-b78e-72053e258dfa
+		summarizeBy: none
+		sourceColumn: periode
+
+	column persen_miskin
+		dataType: double
+		formatString: 0.00
+		lineageTag: 0278d6d3-ec26-524c-bf90-5ade34a285eb
+		summarizeBy: none
+		sourceColumn: persen_miskin
+
+	column jumlah_miskin_juta
+		dataType: double
+		formatString: 0.00
+		lineageTag: a35c0c75-0544-5e6c-bcf1-e22562a3100c
+		summarizeBy: none
+		sourceColumn: jumlah_miskin_juta
+
+	column garis_kemiskinan_rp
+		dataType: int64
+		formatString: #,##0
+		lineageTag: 649790cd-3be9-50fb-910f-27f6296e9a71
+		summarizeBy: none
+		sourceColumn: garis_kemiskinan_rp
+
+	column gkm_rp
+		dataType: int64
+		formatString: #,##0
+		lineageTag: 1a4a1218-75aa-5fce-a69a-343523f80747
+		summarizeBy: none
+		sourceColumn: gkm_rp
+
+	column gkbm_rp
+		dataType: int64
+		formatString: #,##0
+		lineageTag: c3df4e38-225e-5b6e-80fc-4d10584fe4a4
+		summarizeBy: none
+		sourceColumn: gkbm_rp
+
+	column p1
+		dataType: double
+		formatString: 0.000
+		lineageTag: 7582bf2b-620b-568b-8735-a7fa80797716
+		summarizeBy: none
+		sourceColumn: p1
+
+	column p2
+		dataType: double
+		formatString: 0.000
+		lineageTag: 3ac2d230-28a4-5d08-b543-3e1aa66a409b
+		summarizeBy: none
+		sourceColumn: p2
+
+	partition fact_kemiskinan_nasional = m
+		mode: import
+		source = ```
+				let
+					Source = Csv.Document(File.Contents(FolderData & "\fact_kemiskinan_nasional.csv"), [Delimiter = ",", Columns = 9, Encoding = 65001, QuoteStyle = QuoteStyle.None]),
+					PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+					ChangedType = Table.TransformColumnTypes(PromotedHeaders, {{"periode_id", Int64.Type}, {"periode", type text}, {"persen_miskin", type number}, {"jumlah_miskin_juta", type number}, {"garis_kemiskinan_rp", Int64.Type}, {"gkm_rp", Int64.Type}, {"gkbm_rp", Int64.Type}, {"p1", type number}, {"p2", type number}})
+				in
+					ChangedType
+				```
