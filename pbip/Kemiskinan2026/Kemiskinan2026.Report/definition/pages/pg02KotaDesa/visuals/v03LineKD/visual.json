@@ -1,0 +1,102 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "v03LineKD",
+  "position": {
+    "x": 0,
+    "y": 76,
+    "z": 2,
+    "height": 300,
+    "width": 760,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_periode"
+                    }
+                  },
+                  "Property": "periode"
+                }
+              },
+              "queryRef": "dim_periode.periode",
+              "nativeQueryRef": "periode"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_kemiskinan_kota_desa"
+                    }
+                  },
+                  "Property": "Persen Miskin Kota Desa"
+                }
+              },
+              "queryRef": "fact_kemiskinan_kota_desa.Persen Miskin Kota Desa",
+              "nativeQueryRef": "Persen Miskin Kota Desa"
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_kemiskinan_kota_desa"
+                    }
+                  },
+                  "Property": "daerah"
+                }
+              },
+              "queryRef": "fact_kemiskinan_kota_desa.daerah",
+              "nativeQueryRef": "daerah"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Persen Miskin Kota vs Desa per Periode (%)'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
