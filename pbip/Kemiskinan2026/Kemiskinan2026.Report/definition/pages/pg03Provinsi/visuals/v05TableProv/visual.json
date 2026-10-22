@@ -1,0 +1,187 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "v05TableProv",
+  "position": {
+    "x": 640,
+    "y": 372,
+    "z": 4,
+    "height": 288,
+    "width": 620,
+    "tabOrder": 4
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_provinsi"
+                    }
+                  },
+                  "Property": "provinsi"
+                }
+              },
+              "queryRef": "dim_provinsi.provinsi",
+              "nativeQueryRef": "provinsi"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_kemiskinan_provinsi"
+                    }
+                  },
+                  "Property": "Persen Miskin Provinsi"
+                }
+              },
+              "queryRef": "fact_kemiskinan_provinsi.Persen Miskin Provinsi",
+              "nativeQueryRef": "Persen Miskin Provinsi"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_kemiskinan_provinsi"
+                    }
+                  },
+                  "Property": "Jumlah Miskin Provinsi Ribu"
+                }
+              },
+              "queryRef": "fact_kemiskinan_provinsi.Jumlah Miskin Provinsi Ribu",
+              "nativeQueryRef": "Jumlah Miskin Provinsi Ribu"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_kemiskinan_provinsi"
+                    }
+                  },
+                  "Function": 1,
+                  "Property": "garis_kemiskinan_rp"
+                }
+              },
+              "queryRef": "fact_kemiskinan_provinsi.garis_kemiskinan_rp",
+              "nativeQueryRef": "Average of garis_kemiskinan_rp"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fact_kemiskinan_provinsi"
+                  }
+                },
+                "Property": "Persen Miskin Provinsi"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": false
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Rincian Provinsi — Mar 2026'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "flt00000000000009",
+        "ordinal": 9,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_periode"
+              }
+            },
+            "Property": "periode"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "dp",
+              "Entity": "dim_periode",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "dp"
+                          }
+                        },
+                        "Property": "periode"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Mar 2026'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "isHiddenInViewMode": false,
+        "isLockedInViewMode": false
+      }
+    ]
+  }
+}
