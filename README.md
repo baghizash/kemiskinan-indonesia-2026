@@ -62,11 +62,14 @@ lengkap (dokumen, nomor rilis, tanggal) ada di `data/SOURCES.md`.
 Keputusan & keterbatasan data yang disengaja:
 
 - **Tidak ada periode September 2023** — BPS tidak menerbitkannya.
-- **P1/P2 Maret & September 2019 kosong** (tidak terverifikasi utuh); seri
-  indeks berjalan Mar 2020–Mar 2026 lengkap termasuk rincian kota/desa.
-- **Jumlah provinsi Maret 2019** terverifikasi 18 dari 34 provinsi;
-  persentasenya lengkap 34 provinsi.
-- **Garis kemiskinan provinsi** hanya Maret 2026 (lengkap 38 provinsi).
+- **P1/P2 lengkap Mar 2019–Mar 2026** (14 periode, termasuk rincian
+  kota/desa) dari Tabel 6 BRS Profil Kemiskinan.
+- **Jumlah provinsi Maret 2019 lengkap 34 dari 34 provinsi**
+  (persentase dan jumlah sama-sama lengkap).
+- **Garis kemiskinan provinsi** terisi untuk 5 periode: Mar 2019,
+  Sep 2024, Mar 2025, Sep 2025, dan Mar 2026.
+- **Pangsa pengeluaran 40% terbawah** (baris Total) lengkap 14 periode
+  dari BRS Gini Ratio berbagai edisi.
 - Perubahan provinsi dihitung untuk **32 provinsi sebanding**; Papua dan
   Papua Barat 2019 mencakup wilayah pemekaran 2022 sehingga tidak
   like-for-like.
