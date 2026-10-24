@@ -319,8 +319,8 @@ items = [
      "dari 0,363 ke 0,368."),
     ("Metode & keterbatasan",
      "Seluruh angka dikompilasi dari BRS BPS dan dapat ditelusur di "
-     "data/SOURCES.md. P1/P2 2019 tidak terverifikasi sehingga seri indeks "
-     "mulai Mar 2020; perubahan provinsi dibatasi 32 provinsi sebanding."),
+     "data/SOURCES.md. P1/P2 kini lengkap Mar 2019–Mar 2026 dari Tabel 6 "
+     "BRS; perubahan provinsi dibatasi 32 provinsi sebanding."),
 ]
 cy = 3.7
 for head, body in items:
