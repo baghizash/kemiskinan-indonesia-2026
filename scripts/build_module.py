@@ -311,9 +311,9 @@ story.append(Paragraph(
     "Pengeluaran Penduduk Indonesia (termasuk No. 20/02/Th. XXIX, 5 Februari "
     "2026), dan publikasi BPS Penghitungan dan Analisis Kemiskinan Makro "
     "Indonesia 2019. Rincian per angka ada di data/SOURCES.md pada repo. "
-    "Catatan cakupan: P1/P2 tahun 2019 tidak terverifikasi sehingga seri "
-    "indeks mulai Maret 2020; jumlah penduduk miskin provinsi Maret 2019 "
-    "lengkap hanya untuk 18 provinsi; perbandingan provinsi 2019 ke 2026 "
+    "Catatan cakupan: P1/P2 lengkap Maret 2019 sampai Maret 2026 dari "
+    "Tabel 6 BRS; jumlah penduduk miskin provinsi Maret 2019 "
+    "lengkap 34 provinsi; perbandingan provinsi 2019 ke 2026 "
     "dibatasi 32 provinsi yang wilayahnya sebanding.", BODY))
 story.append(Spacer(1, 0.5 * cm))
 story.append(callout(
