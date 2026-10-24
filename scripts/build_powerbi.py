@@ -203,8 +203,8 @@ AVERAGE ( fact_kemiskinan_kota_desa[persen_miskin] )
 | Jumlah Miskin Provinsi Ribu (filter Mar 2026) | {p26.jumlah_miskin_ribu.sum():,.2f} |
 
 Catatan: jumlah provinsi Maret 2026 jika dijumlah = 22.929,74 ribu ≈ total
-nasional 22,93 juta (selisih pembulatan BPS). Nilai P1/P2 untuk Mar & Sep 2019
-kosong (tidak terverifikasi), jadi garis tren P1/P2 mulai Mar 2020.
+nasional 22,93 juta (selisih pembulatan BPS). Nilai P1/P2 kini lengkap
+Mar 2019–Mar 2026 (14 periode, dari Tabel 6 BRS Profil Kemiskinan).
 """
 with open(os.path.join(PBI, "measures_dax.md"), "w") as f:
     f.write(MEASURES_MD)
@@ -241,7 +241,7 @@ Judul tiap halaman memakai periode eksplisit (Mar/Sep + tahun).
 
 ## Halaman 4 — Ketimpangan & Kedalaman
 - Line chart: Gini total/kota/desa per periode.
-- Line chart: P1 & P2 nasional per periode (mulai Mar 2020).
+- Line chart: P1 & P2 nasional per periode (Mar 2019–Mar 2026).
 - Kartu: Gini Mar 2026 (0,368), pangsa pengeluaran 40% terbawah Mar 2026
   (19,22%), P1 Mar 2026 (1,268), P2 Mar 2026 (0,291).
 - Textbox: Gini naik dari titik terendah Sep 2025 (0,363) saat kemiskinan
@@ -281,8 +281,8 @@ Jebakan yang harus dihindari:
   bukan nilai aditif.
 - `fact_kemiskinan_provinsi` mencampur 5 periode; selalu filter periode
   (slicer/pin) sebelum membaca peringkat provinsi.
-- Kolom `p1`/`p2` kosong untuk Mar & Sep 2019 — garis tren P1/P2 memang
-  mulai Mar 2020, bukan karena data hilang di file kamu.
+- Kolom `p1`/`p2` lengkap untuk semua periode Mar 2019–Mar 2026
+  (termasuk rincian kota/desa dari Tabel 6 BRS).
 - Jumlah provinsi dalam ribu, jumlah nasional dalam juta — jangan dicampur
   dalam satu visual tanpa konversi.
 """
