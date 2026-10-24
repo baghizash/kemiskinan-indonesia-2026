@@ -416,8 +416,8 @@ Catatan sentuhan pertama (wajar terjadi):
   itu normal untuk data kategori Mar/Sep.
 - Visual peta tidak dipakai (diganti bar terurut) karena visual peta PBIR
   rawan error; peringkat provinsi tetap terbaca jelas dari bar.
-- Nilai P1/P2 untuk Mar & Sep 2019 memang kosong di sumber yang
-  terverifikasi, jadi tren P1/P2 mulai Mar 2020 — bukan kerusakan data.
+- Nilai P1/P2 lengkap Mar 2019–Mar 2026 (14 periode) dari Tabel 6 BRS
+  Profil Kemiskinan, jadi tren P1/P2 tampil utuh sejak Mar 2019.
 """
 
 # --------------------------------------------------------------------- main
