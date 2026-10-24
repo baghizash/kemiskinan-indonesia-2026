@@ -29,7 +29,7 @@ Jebakan yang harus dihindari:
   bukan nilai aditif.
 - `fact_kemiskinan_provinsi` mencampur 5 periode; selalu filter periode
   (slicer/pin) sebelum membaca peringkat provinsi.
-- Kolom `p1`/`p2` kosong untuk Mar & Sep 2019 — garis tren P1/P2 memang
-  mulai Mar 2020, bukan karena data hilang di file kamu.
+- Kolom `p1`/`p2` lengkap untuk semua periode Mar 2019–Mar 2026
+  (termasuk rincian kota/desa dari Tabel 6 BRS).
 - Jumlah provinsi dalam ribu, jumlah nasional dalam juta — jangan dicampur
   dalam satu visual tanpa konversi.
