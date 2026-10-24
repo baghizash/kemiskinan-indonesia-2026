@@ -30,7 +30,7 @@ Judul tiap halaman memakai periode eksplisit (Mar/Sep + tahun).
 
 ## Halaman 4 — Ketimpangan & Kedalaman
 - Line chart: Gini total/kota/desa per periode.
-- Line chart: P1 & P2 nasional per periode (mulai Mar 2020).
+- Line chart: P1 & P2 nasional per periode (Mar 2019–Mar 2026).
 - Kartu: Gini Mar 2026 (0,368), pangsa pengeluaran 40% terbawah Mar 2026
   (19,22%), P1 Mar 2026 (1,268), P2 Mar 2026 (0,291).
 - Textbox: Gini naik dari titik terendah Sep 2025 (0,363) saat kemiskinan
