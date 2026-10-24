@@ -123,5 +123,5 @@ AVERAGE ( fact_kemiskinan_kota_desa[persen_miskin] )
 | Jumlah Miskin Provinsi Ribu (filter Mar 2026) | 22,929.69 |
 
 Catatan: jumlah provinsi Maret 2026 jika dijumlah = 22.929,74 ribu ≈ total
-nasional 22,93 juta (selisih pembulatan BPS). Nilai P1/P2 untuk Mar & Sep 2019
-kosong (tidak terverifikasi), jadi garis tren P1/P2 mulai Mar 2020.
+nasional 22,93 juta (selisih pembulatan BPS). Nilai P1/P2 kini lengkap
+Mar 2019–Mar 2026 (14 periode, dari Tabel 6 BRS Profil Kemiskinan).
