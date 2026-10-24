@@ -35,8 +35,8 @@ LBL = [p[0] for p in PERIODE]
 # ------------------------------------------------------- seri nasional
 # label: (persen, jumlah_juta, gk, gkm, gkbm, p1_total, p2_total)
 NASIONAL = {
-    "Mar 2019": (9.41, 25.14, 425250, 313232, 112018, None, None),
-    "Sep 2019": (9.22, 24.78, 440538, 324911, 115627, None, None),
+    "Mar 2019": (9.41, 25.14, 425250, 313232, 112018, 1.55, 0.37),
+    "Sep 2019": (9.22, 24.78, 440538, 324911, 115627, 1.50, 0.36),
     "Mar 2020": (9.78, 26.42, 454652, 335793, 118859, 1.61, 0.38),
     "Sep 2020": (10.19, 27.55, 458947, 339004, 119943, 1.75, 0.47),
     "Mar 2021": (10.14, 27.54, 472525, 349474, 123051, 1.714, 0.424),
@@ -54,7 +54,7 @@ NASIONAL = {
 # ------------------------------------------------------- kota / desa
 # label: (persen, jumlah_juta, p1, p2)
 KOTA = {
-    "Mar 2019": (6.69, 9.99, None, None), "Sep 2019": (6.56, 9.86, None, None),
+    "Mar 2019": (6.69, 9.99, 1.05, 0.24), "Sep 2019": (6.56, 9.86, 1.02, 0.23),
     "Mar 2020": (7.38, 11.16, 1.13, 0.25), "Sep 2020": (7.88, 12.04, 1.26, 0.31),
     "Mar 2021": (7.89, 12.18, 1.294, 0.314), "Sep 2021": (7.60, 11.86, 1.229, 0.291),
     "Mar 2022": (7.50, 11.82, 1.187, 0.286), "Sep 2022": (7.53, 11.98, 1.158, 0.264),
@@ -63,7 +63,7 @@ KOTA = {
     "Sep 2025": (6.60, 11.18, 1.040, 0.245), "Mar 2026": (6.34, 10.83, 0.951, 0.209),
 }
 DESA = {
-    "Mar 2019": (12.85, 15.15, None, None), "Sep 2019": (12.60, 14.93, None, None),
+    "Mar 2019": (12.85, 15.15, 2.18, 0.55), "Sep 2019": (12.60, 14.93, 2.11, 0.53),
     "Mar 2020": (12.82, 15.26, 2.21, 0.55), "Sep 2020": (13.20, 15.51, 2.39, 0.68),
     "Mar 2021": (13.10, 15.37, 2.266, 0.569), "Sep 2021": (12.53, 14.64, 2.253, 0.587),
     "Mar 2022": (12.29, 14.34, 2.125, 0.542), "Sep 2022": (12.36, 14.38, 2.115, 0.536),
@@ -76,12 +76,12 @@ DESA = {
 # label: (total, kota, desa, pangsa40_total_atau_None)
 GINI = {
     "Mar 2019": (0.382, 0.392, 0.317, 17.71), "Sep 2019": (0.380, 0.391, 0.315, 17.71),
-    "Mar 2020": (0.381, 0.393, 0.317, 17.73), "Sep 2020": (0.385, 0.399, 0.319, None),
-    "Mar 2021": (0.384, 0.401, 0.315, None), "Sep 2021": (0.381, 0.398, 0.314, None),
-    "Mar 2022": (0.384, 0.403, 0.314, None), "Sep 2022": (0.381, 0.402, 0.313, None),
-    "Mar 2023": (0.388, 0.409, 0.313, None), "Mar 2024": (0.379, 0.399, 0.306, None),
-    "Sep 2024": (0.381, 0.402, 0.308, None), "Mar 2025": (0.375, 0.395, 0.299, None),
-    "Sep 2025": (0.363, 0.383, 0.295, None), "Mar 2026": (0.368, 0.387, 0.296, 19.22),
+    "Mar 2020": (0.381, 0.393, 0.317, 17.73), "Sep 2020": (0.385, 0.399, 0.319, 17.93),
+    "Mar 2021": (0.384, 0.401, 0.315, 17.76), "Sep 2021": (0.381, 0.398, 0.314, 17.97),
+    "Mar 2022": (0.384, 0.403, 0.314, 18.06), "Sep 2022": (0.381, 0.402, 0.313, 18.24),
+    "Mar 2023": (0.388, 0.409, 0.313, 18.04), "Mar 2024": (0.379, 0.399, 0.306, 18.40),
+    "Sep 2024": (0.381, 0.402, 0.308, 18.41), "Mar 2025": (0.375, 0.395, 0.299, 18.65),
+    "Sep 2025": (0.363, 0.383, 0.295, 19.28), "Mar 2026": (0.368, 0.387, 0.296, 19.22),
 }
 
 # ------------------------------------------------------- provinsi
@@ -105,7 +105,7 @@ for p in ["Maluku", "Maluku Utara", "Papua Barat", "Papua Barat Daya", "Papua",
           "Papua Selatan", "Papua Tengah", "Papua Pegunungan"]:
     PULAU[p] = "Maluku dan Papua"
 
-# provinsi: (persen, jumlah_ribu) — Mar 2019 jumlah hanya terverifikasi 18 provinsi
+# provinsi: (persen, jumlah_ribu) — Mar 2019 lengkap 34 provinsi (Penghitungan 2019, Tabel 2.5)
 PROV_2019 = {
     "Aceh": (15.32, 819.44), "Sumatera Utara": (8.83, 1282.04),
     "Sumatera Barat": (6.42, 348.22), "Riau": (7.08, 490.72),
@@ -116,14 +116,14 @@ PROV_2019 = {
     "Jawa Tengah": (10.80, 3743.23), "DI Yogyakarta": (11.70, 448.47),
     "Jawa Timur": (10.37, 4112.25), "Banten": (5.09, 654.46),
     "Bali": (3.79, 163.85), "Nusa Tenggara Barat": (14.56, 735.96),
-    "Nusa Tenggara Timur": (21.09, None), "Kalimantan Barat": (7.49, None),
-    "Kalimantan Tengah": (4.98, None), "Kalimantan Selatan": (4.55, None),
-    "Kalimantan Timur": (5.94, None), "Kalimantan Utara": (6.63, None),
-    "Sulawesi Utara": (7.66, None), "Sulawesi Tengah": (13.48, None),
-    "Sulawesi Selatan": (8.69, None), "Sulawesi Tenggara": (11.24, None),
-    "Gorontalo": (15.52, None), "Sulawesi Barat": (11.02, None),
-    "Maluku": (17.69, None), "Maluku Utara": (6.77, None),
-    "Papua Barat": (22.17, None), "Papua": (27.53, None),
+    "Nusa Tenggara Timur": (21.09, 1146.32), "Kalimantan Barat": (7.49, 378.41),
+    "Kalimantan Tengah": (4.98, 134.59), "Kalimantan Selatan": (4.55, 192.48),
+    "Kalimantan Timur": (5.94, 219.92), "Kalimantan Utara": (6.63, 48.78),
+    "Sulawesi Utara": (7.66, 191.70), "Sulawesi Tengah": (13.48, 410.36),
+    "Sulawesi Selatan": (8.69, 767.80), "Sulawesi Tenggara": (11.24, 302.58),
+    "Gorontalo": (15.52, 186.03), "Sulawesi Barat": (11.02, 151.40),
+    "Maluku": (17.69, 317.69), "Maluku Utara": (6.77, 84.60),
+    "Papua Barat": (22.17, 211.50), "Papua": (27.53, 926.36),
 }
 PROV_SEP2024 = {
     "Aceh": (12.64, 718.96), "Sumatera Utara": (7.19, 1110.92),
@@ -209,7 +209,8 @@ PROV_MAR2026 = {
     "Papua": (18.39, 165.98), "Papua Selatan": (18.54, 100.61),
     "Papua Tengah": (30.41, 321.28), "Papua Pegunungan": (26.34, 300.06),
 }
-# Garis kemiskinan provinsi (Rp/kapita/bulan) — hanya Mar 2026 terverifikasi lengkap
+# Garis kemiskinan provinsi (Rp/kapita/bulan) — terverifikasi untuk Mar 2019,
+# Sep 2024, Mar 2025, Sep 2025, Mar 2026 (lihat GK_PROV di bawah)
 GK_PROV_MAR2026 = {
     "Aceh": 742464, "Sumatera Utara": 743301, "Sumatera Barat": 808511,
     "Riau": 758447, "Jambi": 744065, "Sumatera Selatan": 628228,
@@ -225,6 +226,77 @@ GK_PROV_MAR2026 = {
     "Maluku": 825638, "Maluku Utara": 724488, "Papua Barat": 909502,
     "Papua Barat Daya": 871495, "Papua": 773455, "Papua Selatan": 615015,
     "Papua Tengah": 905417, "Papua Pegunungan": 1275343,
+}
+# GK provinsi Mar 2019 — Penghitungan dan Analisis Kemiskinan Makro 2019, Tabel 2.2 (total K+D)
+GK_PROV_MAR2019 = {
+    "Aceh": 486935, "Sumatera Utara": 466122, "Sumatera Barat": 503652,
+    "Riau": 500612, "Jambi": 448509, "Sumatera Selatan": 410532,
+    "Bengkulu": 499660, "Lampung": 418309, "Kepulauan Bangka Belitung": 677716,
+    "Kepulauan Riau": 594059, "DKI Jakarta": 637260, "Jawa Barat": 386198,
+    "Jawa Tengah": 369385, "DI Yogyakarta": 432026, "Jawa Timur": 397687,
+    "Banten": 462726, "Bali": 400624, "Nusa Tenggara Barat": 384880,
+    "Nusa Tenggara Timur": 373922, "Kalimantan Barat": 438555,
+    "Kalimantan Tengah": 438248, "Kalimantan Selatan": 457222,
+    "Kalimantan Timur": 609155, "Kalimantan Utara": 651416,
+    "Sulawesi Utara": 371283, "Sulawesi Tengah": 441036, "Sulawesi Selatan": 329880,
+    "Sulawesi Tenggara": 327402, "Gorontalo": 333070, "Sulawesi Barat": 328144,
+    "Maluku": 508777, "Maluku Utara": 444650, "Papua Barat": 573313,
+    "Papua": 540099,
+}
+# GK provinsi Sep 2024 & Mar 2025 — BRS Profil Kemiskinan Mar 2025, Tabel 9 (total K+D)
+GK_PROV_SEP2024 = {
+    "Aceh": 665855, "Sumatera Utara": 648336, "Sumatera Barat": 714991,
+    "Riau": 702620, "Jambi": 658100, "Sumatera Selatan": 564462,
+    "Bengkulu": 672816, "Lampung": 599018, "Kepulauan Bangka Belitung": 917673,
+    "Kepulauan Riau": 807602, "DKI Jakarta": 846085, "Jawa Barat": 535509,
+    "Jawa Tengah": 521093, "DI Yogyakarta": 613370, "Jawa Timur": 547751,
+    "Banten": 667403, "Bali": 580306, "Nusa Tenggara Barat": 540339,
+    "Nusa Tenggara Timur": 533944, "Kalimantan Barat": 611320,
+    "Kalimantan Tengah": 641524, "Kalimantan Selatan": 644107,
+    "Kalimantan Timur": 853997, "Kalimantan Utara": 876375,
+    "Sulawesi Utara": 511710, "Sulawesi Tengah": 608687, "Sulawesi Selatan": 467991,
+    "Sulawesi Tenggara": 473343, "Gorontalo": 487578, "Sulawesi Barat": 460283,
+    "Maluku": 739818, "Maluku Utara": 639337, "Papua Barat": 816613,
+    "Papua Barat Daya": 791570, "Papua": 708811, "Papua Selatan": 548646,
+    "Papua Tengah": 798333, "Papua Pegunungan": 1079160,
+}
+GK_PROV_MAR2025 = {
+    "Aceh": 676247, "Sumatera Utara": 666546, "Sumatera Barat": 729806,
+    "Riau": 713117, "Jambi": 664127, "Sumatera Selatan": 581702,
+    "Bengkulu": 683820, "Lampung": 612451, "Kepulauan Bangka Belitung": 956833,
+    "Kepulauan Riau": 832410, "DKI Jakarta": 852768, "Jawa Barat": 547752,
+    "Jawa Tengah": 537812, "DI Yogyakarta": 626363, "Jawa Timur": 558029,
+    "Banten": 684232, "Bali": 607847, "Nusa Tenggara Barat": 556846,
+    "Nusa Tenggara Timur": 549607, "Kalimantan Barat": 622882,
+    "Kalimantan Tengah": 654066, "Kalimantan Selatan": 650675,
+    "Kalimantan Timur": 866193, "Kalimantan Utara": 884970,
+    "Sulawesi Utara": 530304, "Sulawesi Tengah": 624854, "Sulawesi Selatan": 477966,
+    "Sulawesi Tenggara": 488171, "Gorontalo": 495576, "Sulawesi Barat": 475488,
+    "Maluku": 757600, "Maluku Utara": 662397, "Papua Barat": 831001,
+    "Papua Barat Daya": 812630, "Papua": 714365, "Papua Selatan": 566052,
+    "Papua Tengah": 817834, "Papua Pegunungan": 1132178,
+}
+# GK provinsi Sep 2025 — BRS Profil Kemiskinan Sep 2025, Tabel 8 (total K+D)
+GK_PROV_SEP2025 = {
+    "Aceh": 715103, "Sumatera Utara": 718220, "Sumatera Barat": 776517,
+    "Riau": 747345, "Jambi": 713849, "Sumatera Selatan": 609044,
+    "Bengkulu": 712003, "Lampung": 634062, "Kepulauan Bangka Belitung": 992426,
+    "Kepulauan Riau": 870738, "DKI Jakarta": 897768, "Jawa Barat": 575499,
+    "Jawa Tengah": 570870, "DI Yogyakarta": 649331, "Jawa Timur": 585020,
+    "Banten": 715288, "Bali": 642986, "Nusa Tenggara Barat": 575856,
+    "Nusa Tenggara Timur": 563052, "Kalimantan Barat": 652220,
+    "Kalimantan Tengah": 683664, "Kalimantan Selatan": 684567,
+    "Kalimantan Timur": 897759, "Kalimantan Utara": 933675,
+    "Sulawesi Utara": 557310, "Sulawesi Tengah": 664691, "Sulawesi Selatan": 514958,
+    "Sulawesi Tenggara": 519411, "Gorontalo": 519640, "Sulawesi Barat": 510846,
+    "Maluku": 797060, "Maluku Utara": 692592, "Papua Barat": 868631,
+    "Papua Barat Daya": 855657, "Papua": 736720, "Papua Selatan": 587264,
+    "Papua Tengah": 873843, "Papua Pegunungan": 1235328,
+}
+GK_PROV = {
+    "Mar 2019": GK_PROV_MAR2019, "Sep 2024": GK_PROV_SEP2024,
+    "Mar 2025": GK_PROV_MAR2025, "Sep 2025": GK_PROV_SEP2025,
+    "Mar 2026": GK_PROV_MAR2026,
 }
 
 PERIOD_ID = {p[0]: p[1] * 100 + p[2] for p in PERIODE}
@@ -270,7 +342,7 @@ with open(os.path.join(DATA, "kemiskinan_provinsi.csv"), "w", newline="") as f:
                      ("Mar 2025", PROV_MAR2025), ("Sep 2025", PROV_SEP2025),
                      ("Mar 2026", PROV_MAR2026)):
         for prov, (ps, jm) in src.items():
-            gk = GK_PROV_MAR2026.get(prov, "") if lbl == "Mar 2026" else ""
+            gk = GK_PROV.get(lbl, {}).get(prov, "")
             w.writerow([lbl, prov, PULAU[prov], ps, num(jm), gk])
 
 print("CSV kompilasi tertulis: nasional(14), kota_desa(28), gini(42), provinsi(186)")
@@ -293,36 +365,43 @@ agregat resmi yang diterbitkan BPS.
 | Dokumen | Nomor & tanggal rilis | Dipakai untuk |
 |---|---|---|
 | Profil Kemiskinan di Indonesia Maret 2026 | No. 80/08/Th. XXIX, 5 Agustus 2026 | Seri nasional Gambar 1 (Mar 2019–Mar 2026), Tabel 1 kota/desa, Tabel 2 pulau, Tabel 3 GK, Tabel 6 P1/P2, Tabel 7/8 provinsi Sep 2025 & Mar 2026, Tabel 9 GK provinsi Mar 2026 |
-| Profil Kemiskinan di Indonesia September 2025 | No. 19/02/Th. XXIX, 5 Februari 2026 | Tabel 7/8 provinsi Mar 2025 & Sep 2025 (cek silang) |
-| Tingkat Ketimpangan Pengeluaran Penduduk Indonesia September 2025 | No. 20/02/Th. XXIX, 5 Februari 2026 | Gambar 1 seri Gini Sep 2019–Sep 2025 (total, kota, desa) |
+| Profil Kemiskinan di Indonesia September 2025 | No. 19/02/Th. XXIX, 5 Februari 2026 | Tabel 7/8 provinsi Mar 2025 & Sep 2025 (cek silang); Tabel 8 GK provinsi Sep 2025 (lengkap 38 provinsi) |
+| Tingkat Ketimpangan Pengeluaran Penduduk Indonesia September 2025 | No. 20/02/Th. XXIX, 5 Februari 2026 | Gambar 1 seri Gini Sep 2019–Sep 2025 (total, kota, desa); pangsa 40% terbawah Sep 2025 = 19,28% |
 | Tingkat Ketimpangan Pengeluaran Penduduk Indonesia Maret 2026 | BRS Gini Maret 2026 (rilis Agustus 2026) | Gini Mar 2026: total 0,368; kota 0,387; desa 0,296; pangsa 40% terbawah 19,22% |
-| Profil Kemiskinan di Indonesia Maret 2025 | No. 63/07/Th. XXVIII, 25 Juli 2025 | Tabel 1, 3, 6 (Mar 2024–Mar 2025); Tabel 7/8 provinsi Sep 2024 & Mar 2025; kemiskinan ekstrem Mar 2025 0,85% |
+| Profil Kemiskinan di Indonesia Maret 2025 | No. 63/07/Th. XXVIII, 25 Juli 2025 | Tabel 1, 3, 6 (Mar 2024–Mar 2025); Tabel 7/8 provinsi Sep 2024 & Mar 2025; Tabel 9 GK provinsi Sep 2024 & Mar 2025 (lengkap 38 provinsi); kemiskinan ekstrem Mar 2025 0,85% |
 | Profil Kemiskinan di Indonesia Maret 2023 | No. 47/07/Th. XXVI, 17 Juli 2023 | Tabel 1, 3, 6 (Mar 2022–Mar 2023) |
 | Profil Kemiskinan di Indonesia Maret 2022 | No. 51/07/Th. XXV, 15 Juli 2022 | Tabel 1, 3, 6 (Mar 2021–Mar 2022), termasuk P1/P2 Sep 2021 |
 | Profil Kemiskinan di Indonesia Maret 2021 | No. 53/07/Th. XXIV, 15 Juli 2021 | Tabel 1, 3, 6 (Mar 2020–Mar 2021) |
 | Profil Kemiskinan di Indonesia September 2020 | BRS 15 Februari 2021 | Tabel 3 GK (Sep 2019–Sep 2020) |
-| Profil Kemiskinan di Indonesia September 2019 | BRS 15 Januari 2020 | Tabel 3 GK: Sep 2019 = Rp440.538 (GKM 324.911, GKBM 115.627); abstraksi bps.go.id |
+| Profil Kemiskinan di Indonesia September 2019 | BRS 15 Januari 2020 | Tabel 3 GK: Sep 2019 = Rp440.538 (GKM 324.911, GKBM 115.627); Tabel 6 P1/P2 Mar & Sep 2019 (total, kota, desa); abstraksi bps.go.id |
 | Persentase Penduduk Miskin Maret 2020 Naik Menjadi 9,78 Persen | Rilis bps.go.id, 15 Juli 2020 | Kota/desa Sep 2019 (kota 6,56%/9,86 jt; desa 12,60%/14,93 jt); GK Mar 2020 |
 | Persentase Penduduk Miskin Maret 2019 Sebesar 9,41 Persen | Rilis bps.go.id, 15 Juli 2019 | Mar 2019: kota 6,69%/9,99 jt; desa 12,85%/15,15 jt; GK Rp425.250 |
 | Gini Ratio Maret 2019 Tercatat Sebesar 0,382 | Rilis bps.go.id, 15 Juli 2019 | Gini Mar 2019: total 0,382; kota 0,392; desa 0,317; pangsa 40% terbawah 17,71% |
 | Tingkat Ketimpangan Pengeluaran Penduduk Indonesia September 2019 | No. 09/01/Th. XXIII, 15 Januari 2020 | Gini Sep 2019: 0,380; kota 0,391; desa 0,315 |
 | Gini Ratio Maret 2020 Tercatat Sebesar 0,381 | Rilis bps.go.id, 15 Juli 2020 | Gini Mar 2020: 0,381; kota 0,393; desa 0,317; pangsa 40% terbawah 17,73% |
-| Penghitungan dan Analisis Kemiskinan Makro Indonesia 2019 (Katalog 3205022) + Indikator Kemiskinan Menurut Provinsi Mar & Sep 2019 | Publikasi BPS | Provinsi Mar 2019: persentase 34 provinsi + jumlah (ribu) 18 provinsi |
+| Penghitungan dan Analisis Kemiskinan Makro Indonesia 2019 (Katalog 3205022) + Indikator Kemiskinan Menurut Provinsi Mar & Sep 2019 | Publikasi BPS | Provinsi Mar 2019: persentase + jumlah (ribu) lengkap 34 provinsi (Tabel 2.5); GK provinsi Mar 2019 (Tabel 2.2, total kota+desa) |
+| BRS Gini Ratio berbagai edisi (Sep 2020, Mar 2021, Sep 2021, Mar 2022, Sep 2024) + BRS Gini Maret 2024 (No. 51/07/Th. XXVII, 1 Juli 2024, Tabel 1) + Penghitungan dan Analisis Kemiskinan Makro Indonesia 2025 (Katalog 3205022, Gambar 3.7) | Rilis BPS 2021–2026 | Pangsa pengeluaran 40% terbawah (total): Sep 2020 17,93%; Mar 2021 17,76%; Sep 2021 17,97%; Mar 2022 18,06%; Sep 2022 18,24%; Mar 2023 18,04%; Mar 2024 18,40%; Sep 2024 18,41%; Mar 2025 18,65%; Sep 2025 19,28% — seri pangsa kini lengkap 14 periode |
 
 ## Catatan cakupan & keputusan data
 
 - **Tidak ada periode September 2023.** BPS tidak menerbitkan Susenas
   September 2023 untuk kemiskinan (peralihan metodologi/pendataan), sehingga
   seri melompat dari Mar 2023 ke Mar 2024. Ini disengaja, bukan data hilang.
-- **P1/P2 Maret & September 2019 dikosongkan.** Tabel 6 BRS September 2019
-  tidak berhasil diambil utuh pada saat kompilasi; seri P1/P2 yang
-  terverifikasi lengkap berjalan Mar 2020–Mar 2026 (12 periode, termasuk
-  rincian kota/desa).
-- **Jumlah penduduk miskin provinsi Maret 2019** hanya terverifikasi untuk
-  18 dari 34 provinsi (sel kosong pada 16 provinsi); persentase Mar 2019
-  lengkap untuk 34 provinsi.
-- **Garis kemiskinan provinsi** hanya diisi untuk Mar 2026 (Tabel 9 BRS
-  Mar 2026, lengkap 38 provinsi).
+- **P1/P2 lengkap Mar 2019–Mar 2026 (14 periode).** Nilai Mar & Sep 2019
+  diisi dari Tabel 6 BRS Profil Kemiskinan September 2019 (dicek silang
+  identik pada Tabel 6 BRS September 2020): Mar 2019 P1 1,55 / P2 0,37;
+  Sep 2019 P1 1,50 / P2 0,36, termasuk rincian kota/desa.
+- **Jumlah penduduk miskin provinsi Maret 2019 lengkap 34 dari 34 provinsi**
+  (Tabel 2.5 Penghitungan dan Analisis Kemiskinan Makro Indonesia 2019);
+  persentase Mar 2019 juga lengkap 34 provinsi.
+- **Garis kemiskinan provinsi** diisi untuk 5 periode: Mar 2019 (34 provinsi,
+  Tabel 2.2 publikasi Penghitungan 2019), Sep 2024 & Mar 2025 (38 provinsi,
+  Tabel 9 BRS Mar 2025), Sep 2025 (38 provinsi, Tabel 8 BRS Sep 2025), dan
+  Mar 2026 (38 provinsi, Tabel 9 BRS Mar 2026). Semua nilai adalah total
+  kota+desa per provinsi.
+- **Pangsa pengeluaran 40% terbawah (total) lengkap 14 periode** dari BRS
+  Gini Ratio berbagai edisi (lihat tabel sumber); nilai kota/desa tidak
+  dikompilasi, hanya baris Total yang diisi.
 - **Gini kota/desa Sep 2020** (kota 0,399; desa 0,319) dibaca dari Gambar 1
   BRS Gini Sep 2025 dan dicek silang dengan tabel Gini BPS per provinsi
   (baris Indonesia). Nilai total & desa cocok di semua titik cek.
