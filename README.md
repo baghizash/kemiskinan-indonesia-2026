@@ -74,7 +74,25 @@ Keputusan & keterbatasan data yang disengaja:
   Papua Barat 2019 mencakup wilayah pemekaran 2022 sehingga tidak
   like-for-like.
 
+## Visualisasi Utama
+
+![Tren kemiskinan nasional, Mar 2019 sampai Mar 2026](charts/01_tren_nasional.png)
+
+*Tren kemiskinan nasional, Mar 2019 sampai Mar 2026*
+
+![Tren rasio Gini nasional](charts/06_gini.png)
+
+*Tren rasio Gini nasional*
+
+![Persentase penduduk miskin per provinsi, Mar 2026](charts/07_provinsi_mar2026.png)
+
+*Persentase penduduk miskin per provinsi, Mar 2026*
+
 ## Dashboard Power BI
+
+![Pratinjau halaman 1 dashboard Power BI](powerbi/dashboard_preview_halaman1.png)
+
+*Pratinjau layout halaman 1 dashboard dari kit di folder `powerbi/`.*
 
 Kit di folder `powerbi/` merakit file **`Kemiskinan-Indonesia-2026.pbix`**:
 
